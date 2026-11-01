@@ -1,24 +1,39 @@
 # weekcard
 
-Example cog created by new-cog. Replace this README when you build the real cog.
+A week-at-a-glance image: ISO week number, day and date, how much of the week has passed, and a
+GitHub-style day grid counting down to a configurable date (one row per calendar year, a column
+per week; finished days green, today outlined, days left dim). The card grows with the range.
+
+Drawn by the [Canvas](https://github.com/snailsquid/cog-canvas) cog, which must be loaded. The
+timezone is the owner's, from the [Profile](https://github.com/snailsquid/cog-profile) cog (UTC if
+it isn't loaded).
 
 ## Commands
 
 | Command | Who | What |
 |---|---|---|
-| `[p]weekcard` | anyone | Says hello and increments a counter. |
-| `[p]weekcard reset` | owner | Resets the counter. |
+| `[p]weekcard` | anyone | Posts the card for right now. |
+| `[p]weekcard until <date>` | owner | Count down to `YYYY`, `YYYY-MM` (end of month) or `YYYY-MM-DD`. `reset` = end of this year (default). |
+| `[p]weekcard from <date>` | owner | Start the grid at a date (start of month/year for partial dates). `reset` = start of this year (default). |
+
+The range spans at most 10 calendar years.
+
+## Morning section
+
+Offers the `weekcard` section (order 10) to [Morning](https://github.com/snailsquid/cog-morning)
+through `morning_sections()`, drawn at Morning's send time.
 
 ## Events emitted
 
-| Event | Listener signature | When |
-|---|---|---|
-| `weekcard_hello` | `on_weekcard_hello(self, user: discord.abc.User, count: int)` | After `[p]weekcard` runs. |
+None.
 
 ## Public methods
 
-None.
+| Method | What |
+|---|---|
+| `await cog.card(now) -> Optional[discord.File]` | The card for a timezone-aware `datetime`; `None` if Canvas isn't loaded. |
+| `cog.morning_sections()` | Morning's section hook. |
 
 ## Secrets
 
-None. (If needed: `[p]set api <service> key,<value>`, read with `bot.get_shared_api_tokens("<service>")`.)
+None.

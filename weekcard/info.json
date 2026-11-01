@@ -3,11 +3,14 @@
         "snailsquid"
     ],
     "name": "Weekcard",
-    "short": "Week-at-a-glance card image: week number, date, week progress and the year's remaining weeks",
-    "description": "Week-at-a-glance card image: week number, date, week progress and the year's remaining weeks",
-    "end_user_data_statement": "This cog does not persistently store data about users.",
+    "short": "Week-at-a-glance card image",
+    "description": "Week-at-a-glance card image: week number, date, week progress and the year's remaining days. Drawn by the Canvas cog; offered to Morning as a section.",
+    "end_user_data_statement": "This cog does not store data about users.",
     "requirements": [],
-    "tags": [],
+    "tags": [
+        "utility",
+        "productivity"
+    ],
     "min_bot_version": "3.5.0",
     "hidden": false,
     "disabled": false,
