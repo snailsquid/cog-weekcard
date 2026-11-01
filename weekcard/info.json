@@ -3,8 +3,8 @@
         "snailsquid"
     ],
     "name": "Weekcard",
-    "short": "Week-at-a-glance card image",
-    "description": "Week-at-a-glance card image: week number, date, week progress and the year's remaining days. Drawn by the Canvas cog; offered to Morning as a section.",
+    "short": "Life and college progress cards for the morning digest",
+    "description": "Two image cards drawn by the Canvas cog and offered to Morning as sections: life (week number, date, week progress) and college (% finished and a countdown week grid).",
     "end_user_data_statement": "This cog does not store data about users.",
     "requirements": [],
     "tags": [
