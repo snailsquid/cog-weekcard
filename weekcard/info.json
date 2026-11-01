@@ -1,0 +1,15 @@
+{
+    "author": [
+        "snailsquid"
+    ],
+    "name": "Weekcard",
+    "short": "Week-at-a-glance card image: week number, date, week progress and the year's remaining weeks",
+    "description": "Week-at-a-glance card image: week number, date, week progress and the year's remaining weeks",
+    "end_user_data_statement": "This cog does not persistently store data about users.",
+    "requirements": [],
+    "tags": [],
+    "min_bot_version": "3.5.0",
+    "hidden": false,
+    "disabled": false,
+    "type": "COG"
+}
